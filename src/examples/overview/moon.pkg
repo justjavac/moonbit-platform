@@ -1,0 +1,9 @@
+import {
+  "justjavac/platform",
+}
+
+supported_targets = "native"
+
+options(
+  "is-main": true,
+)
