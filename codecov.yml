@@ -1,0 +1,23 @@
+comment:
+  after_n_builds: 3
+
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 1%
+
+flags:
+  linux:
+    paths:
+      - src/
+    carryforward: true
+  macos:
+    paths:
+      - src/
+    carryforward: true
+  windows:
+    paths:
+      - src/
+    carryforward: true
