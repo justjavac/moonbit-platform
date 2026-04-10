@@ -1,0 +1,65 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "justjavac/platform"
+
+import {
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub fn arch() -> Arch
+
+pub fn current() -> Info
+
+pub fn os() -> Os
+
+// Errors
+
+// Types and methods
+pub(all) enum Arch {
+  X86
+  X64
+  Arm
+  Arm64
+  Riscv64
+  UnknownArch
+} derive(Eq, @debug.Debug)
+pub fn Arch::is_known(Self) -> Bool
+pub fn Arch::name(Self) -> String
+pub impl Show for Arch
+
+pub(all) struct Info {
+  os : Os
+  arch : Arch
+} derive(Eq, @debug.Debug)
+pub fn Info::arch_name(Self) -> String
+pub fn Info::executable_suffix(Self) -> String
+pub fn Info::family(Self) -> String
+pub fn Info::is_known(Self) -> Bool
+pub fn Info::is_unix(Self) -> Bool
+pub fn Info::is_windows(Self) -> Bool
+pub fn Info::line_ending(Self) -> String
+pub fn Info::os_name(Self) -> String
+pub fn Info::path_separator(Self) -> String
+pub fn Info::target(Self) -> String
+pub impl Show for Info
+
+pub(all) enum Os {
+  Windows
+  MacOS
+  Linux
+  UnknownOs
+} derive(Eq, @debug.Debug)
+pub fn Os::executable_suffix(Self) -> String
+pub fn Os::family(Self) -> String
+pub fn Os::is_known(Self) -> Bool
+pub fn Os::is_unix(Self) -> Bool
+pub fn Os::is_windows(Self) -> Bool
+pub fn Os::line_ending(Self) -> String
+pub fn Os::name(Self) -> String
+pub fn Os::path_separator(Self) -> String
+pub impl Show for Os
+
+// Type aliases
+
+// Traits
+
