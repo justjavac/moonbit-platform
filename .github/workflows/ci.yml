@@ -1,12 +1,12 @@
-name: native
+name: ci
 
 on:
   push:
   pull_request:
 
 jobs:
-  native:
-    name: native (${{ matrix.flag }})
+  ci:
+    name: ci (${{ matrix.flag }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
