@@ -21,18 +21,6 @@ The package exposes only compile-time native platform facts:
 The implementation is a tiny C stub plus a MoonBit wrapper. It does not inspect
 environment variables or call host services.
 
-## Install
-
-Import the package from a native-only package:
-
-```moonbit
-import {
-  "justjavac/platform",
-}
-
-supported_targets = "native"
-```
-
 ## Quick Start
 
 ```mbt
