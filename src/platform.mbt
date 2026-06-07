@@ -55,7 +55,7 @@ fn[T : Debug] write_debug_show(value : T, logger : &Logger) -> Unit {
 /// This implementation is intended for diagnostic output. Use `Os::name` when
 /// you need the stable lowercase label intended for target strings or file
 /// names.
-pub impl Show for Os with output(self, logger : &Logger) -> Unit {
+pub impl Show for Os with fn output(self, logger : &Logger) -> Unit {
   write_debug_show(self, logger)
 }
 
@@ -65,7 +65,7 @@ pub impl Show for Os with output(self, logger : &Logger) -> Unit {
 /// This implementation is intended for diagnostic output. Use `Arch::name`
 /// when you need the stable lowercase label intended for target strings or
 /// file names.
-pub impl Show for Arch with output(self, logger : &Logger) -> Unit {
+pub impl Show for Arch with fn output(self, logger : &Logger) -> Unit {
   write_debug_show(self, logger)
 }
 
@@ -75,7 +75,7 @@ pub impl Show for Arch with output(self, logger : &Logger) -> Unit {
 /// This implementation is useful while debugging because it exposes both
 /// fields at once. Use `Info::target` when you need a compact stable string for
 /// machine-readable output.
-pub impl Show for Info with output(self, logger : &Logger) -> Unit {
+pub impl Show for Info with fn output(self, logger : &Logger) -> Unit {
   write_debug_show(self, logger)
 }
 
